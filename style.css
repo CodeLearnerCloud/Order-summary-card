@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --fz: 1rem;
+
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --fw-bolder: 900;
+
+  --clr-primary: hsl(225, 100%, 94%);
+  --clr-secondary: hsl(245, 75%, 52%);
+
+  --clr-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+}
+
+*,*::after,*::before { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: var(--fz);
+  background-color: var(--clr-primary);
+  background-image: url(images/pattern-background-mobile.svg) cover;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: 10vh auto;
+  border-radius: var(--fz);
+  background: white;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 24rem;
+  }
+}
+
+.thumbnile-img {
+  border-radius: var(--fz) var(--fz) 0 0;
+  width: 100%;
+  display: block;
+}
+
+.card-details {
+  color: var(--clr-desaturated-blue);
+  width: 90%;
+  margin: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bolder);
+  color: var(--clr-dark-blue);
+  margin: 2rem 0 0;
+}
+
+.desc {
+  margin: 1rem auto 1.5rem;
+  line-height: 1.5;
+  width: 88%;
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  background: var(--clr-pale-blue);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.music-details {
+  margin-left: 1rem;
+}
+
+.music-plan {
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark-blue);
+}
+
+.music-cancle {
+  margin-left: auto;
+  color: var(--clr-secondary);
+}
+
+.btn-payment {
+  display: block;
+  margin: 1.5rem 0;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background: var(--clr-secondary);
+  color: white;
+  font-weight: var(--fw-bolder);
+  font-size: 1rem;
+  opacity: .9;
+  cursor: pointer;
+  box-shadow: 0 1rem 1rem var(--clr-primary);
+}
+
+.btn-payment:hover {
+  opacity: 1;
+}
+
+.btn-cancle {
+  margin-bottom: 2rem;
+  background: transparent;
+  border: none;
+  font-weight: var(--fw-bolder);
+  color: var(--clr-desaturated-blue);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-cancle:hover {
+  color: var(--clr-dark-blue);
+}
